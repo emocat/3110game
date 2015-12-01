@@ -19,7 +19,7 @@ public:
         numFailed = 0;
         numRemaining = 10;
         loadQuestions(questionArray);
-        for (int i=1;i<5;i++)
+        for (int i=1;i<9;i++)
         {
             cout << "Question Number " << i << endl;
             queryUser(questionArray[i-1]);
@@ -47,6 +47,6 @@ private:
     int score; //number of questions solved successfully
     int numFailed; //number questions failed
     int numRemaining; //number of questions left to solve
-    Question questionArray [10]; //assuming we come up with ten questions?
+    Question questionArray [20]; 
 };
 #endif

@@ -65,8 +65,10 @@ void Six::loadQuestions(Question qarray[])
         cout << "loadQuestions array started" << endl;
         fstream inFile;
         inFile.open("3110questions.txt",ios::in);
-        for (int i=0;i<4;i++)
+        for (int i=0;i<9;i++)
         {
+            //each loop takes in four lines. However, only lines 2-4 contain info we want to keep
+            inFile.getline(input,LENGTH); //skip over "QUESTION X"
             inFile.getline(input,LENGTH);
             qarray[i].question=input;
             inFile.getline(input,LENGTH);
