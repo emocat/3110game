@@ -37,6 +37,7 @@ void Six::queryUser(Question q)
                 cout << test << endl;
                 q.attemptsLeft--;
                 cout << q.question << endl;
+                cout << "The six-letter word is: " << q.sixLetterWord << endl;
                 cin.clear();
                 cin.getline(userAnswer, 100);
                 cout << endl;
