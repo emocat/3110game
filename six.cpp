@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstring>
 #include "six.h"
 
 void Six::queryUser(Question q)
@@ -16,6 +17,9 @@ void Six::queryUser(Question q)
 
         while (q.solved == false && q.attemptsLeft >0)
         {
+            for(int i = 0; i<25; i++){
+                userAnswer[i] = tolower(userAnswer[i]);                 
+                }
             if (strcmp(userAnswer,q.answer)==0)
 
             {
