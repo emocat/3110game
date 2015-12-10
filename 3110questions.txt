@@ -35,7 +35,7 @@ When you are going through millions of information that make megabytes look smal
 filtering terabyte
 filter
 QUESTION 10
-What a child would likely wear in winter on their hands(6,7)\
-commen mittens
+What a child would likely wear in winter on their hands(6,7)
+common mittens
 commit
 
