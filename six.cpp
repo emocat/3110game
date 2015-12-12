@@ -5,6 +5,8 @@
 
 void Six::queryUser(Question q)
     {
+        char skip[5] = "skip";
+        char giveup[8] = "give up";
         char userAnswer[100];
         char lowerCase[100];
         int length;
@@ -27,6 +29,16 @@ void Six::queryUser(Question q)
                 score++;
                 q.solved = true;
                 cout << "Correct! Your current score has been increased to: " << score << endl;
+            }
+            else if (strcmp(userAnswer,skip) == 0)
+            {
+                cout << "You chose to skip this question. Moving on to next question..." << endl;
+                break;
+            }
+            else if (strcmp(userAnswer,giveup) == 0)
+            {
+                cout << "You chose to give up. The answer is " << q.answer << ". Moving on to next question. "<< endl;
+                break;
             }
             else
             {
