@@ -32,18 +32,20 @@ void Six::queryUser(Question q)
             {
                 q.attemptsLeft--;
                 cout << "Incorrect! You have " << q.attemptsLeft << " attempts remaining!" << endl;
-                cout << q.question << endl;  
-                cout << "The six-letter word is: " << q.sixLetterWord << endl;
-                cin.clear();
-                cin.getline(userAnswer, 100);
-                cout << endl;
+                if (q.attemptsLeft>0){
+                    cout << q.question << endl;  
+                    cout << "The six-letter word is: " << q.sixLetterWord << endl;
+                    cin.clear();
+                    cin.getline(userAnswer, 100);
+                    cout << endl;
+                }
 		
             }
         }
 
         if (q.attemptsLeft == 0)
         {  
-            cout << "Incorrect! You have failed your three attempts at this question :(" << endl;
+            cout << "You have failed your three attempts at this question :(" << endl;
             cout << "Moving on to the next question..." << endl;
         }
     }
